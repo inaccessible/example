@@ -1,0 +1,337 @@
+﻿.personInfoBlock {
+    /*border: 1px solid #000;*/
+}
+
+.personInfoBlock .leftSide {
+    float: left;
+    width: 220px;
+    margin-left: 12px;
+    /*border: 1px solid #f0f;*/
+}
+
+.personInfoBlock .leftSide .userImage {
+    width: 212px;
+    background: url(../Images/artist/userpicShadow.png) left bottom no-repeat; 
+}
+
+.personInfoBlock .leftSide .userImage img {
+    width: 190px;
+    margin-left: 10px;
+    padding-bottom: 23px;
+}
+
+.personInfoBlock .leftSide .giftBlock img {
+    width: 125px;
+    height: 125px;
+    margin: 26px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.personInfoBlock .leftSide .leftBlockContent {
+    margin-left: 10px;
+}
+
+.personInfoBlock .leftSide .leftBlockContent.giftBlock,  
+.personInfoBlock .leftSide .leftBlockContent.subscribe {
+    color: #3C79AB;
+    line-height: 20px;
+    width: 190px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 23px;
+}
+
+.personInfoBlock .leftSide .leftBlockContent.giftBlock:hover,
+.personInfoBlock .leftSide .leftBlockContent.subscribe:hover
+ {
+    background: url(../Images/artist/title190Bg.png) no-repeat 0 0;
+    color: #72B4EC;
+    cursor: pointer;
+}
+
+.personInfoBlock .leftSide .leftBlockContent.giftBlock .icon, 
+.personInfoBlock .leftSide .leftBlockContent.subscribe .icon{
+    margin: 5px;
+}
+
+.personInfoBlock .leftSide .leftBlockContent.giftBlock:hover .icon, 
+.personInfoBlock .leftSide .leftBlockContent.subscribe:hover .icon{
+    background-position: 0 -15px;
+}
+
+.personInfoBlock .rightSide {
+    width: 485px;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+    /*border: 1px solid #f00;*/
+}
+
+.personInfoBlock .rightSide .personHeader, 
+.personInfoBlock .rightSide .personRowInfo {
+    height: 25px;
+    color: #3C79AB;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+
+    .personInfoBlock .rightSide .personHeader
+    {
+        margin-bottom: 10px;
+    }
+.personInfoBlock .rightSide .personHeader .icon, 
+.personInfoBlock .rightSide .personRowInfo .icon {
+    margin: 6px 6px 0 6px;
+}
+
+.personInfoBlock .rightSide .personHeader:hover {
+    cursor: pointer;
+    background: url(../Images/artist/titleBg.png) 0 0 no-repeat;
+    color: #72B4EC;
+}
+
+.personInfoBlock .rightSide .personHeader:hover span.icon {
+    background-position: 0 -15px;
+}
+
+.personInfoBlock .rightSide .personRowInfo .infoBlock {
+    float: left;
+    margin-right: 10px;
+}
+
+.personInfoBlock .rightSide .personRowInfo .infoBlock:hover 
+ {
+    cursor: pointer;
+}
+
+.personInfoBlock .rightSide .personRowInfo .infoBlock .fieldData:hover
+ {
+   color: #72B4EC;
+}
+
+.personInfoBlock .rightSide .personRowInfo .infoBlock:hover .icon
+{
+    background-position: 0 -15px;
+}
+
+.personInfoBlock ul.sliderBlock li.slider {
+    width: 119px;
+}
+
+.personInfoBlock .sliderContainer .slider_next_shadow{
+    left: 470px;
+}
+
+.personInfoBlock .sliderContainer .slider_next_shadow{
+    left: 470px;
+}
+
+/*similar*/
+
+.similarContainer .similarBLock {
+    float: left;
+    width: 240px;
+}
+
+.similarContainer .similarBLock .cover {
+    width: 68px;
+    height: 65px;
+    background: url(../Images/albumCoverSmall.png) center top no-repeat;
+    float: left;
+    float: left;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.similarContainer .similarBLock .cover .noImageHolderNoBorder{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+    background: url(../Images/no-imageNoBorder50x50.png) center top no-repeat;
+    margin-top: 2px;
+}
+
+.similarContainer .similarBLock .cover .coverHoverHolder50{
+    height: 21px;
+    width: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-top: -21px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.similarContainer .similarBLock .cover .coverHover{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 21px;
+    background: url(../Images/CoverHoverpxl.png);
+    padding-top: 3px;
+    margin-top: 21px;
+}
+
+.similarContainer .similarBLock .cover .playBtn {
+    width: 15px;
+    height: 15px;
+    background: url(../Images/coverHoverPlaySmall.png) 0 0 no-repeat;
+    float: left;
+    margin-left: 6px;
+}
+
+.similarContainer .similarBLock .cover .playBtn:hover {
+    background-position: 0 -15px;
+}
+
+.similarContainer .similarBLock .cover .playListBtn {
+    width: 15px;
+    height: 15px;
+    background: url(../Images/coverHoverPlaylistSmall.png) 0 0 no-repeat;
+    float: right;
+    margin-right: 6px;
+}
+
+.similarContainer .similarBLock .cover .playListBtn:hover {
+    background-position: 0 -15px;
+}
+
+.similarContainer .similarBLock .rankBlock{
+    width: 150px;
+    margin-top: 6px;
+}
+
+.similarContainer .similarBLock .rankBlock:hover .icon{
+    background-position: 0 -15px;
+}
+
+.similarContainer .similarBLock span {
+    color: #b3b3b3;
+}
+
+.similarContainer .similarBLock span.similarArtistName, .similarContainer .similarBLock .rankBlock span{
+    color: #3C79AB;
+    cursor: pointer;
+}
+
+.similarContainer .similarBLock span.similarArtistName:hover, .similarContainer .similarBLock .rankBlock:hover span{
+    color: #72B4EC;
+}
+
+
+.noDataContent {
+    color: #777;
+    text-align: center;
+    margin-top: 30px;
+    height: 50px; 
+}
+
+/*  user / artist block visibility */
+
+.personInfoBlock.artistView .artistInfoBlock, 
+.personInfoBlock.artistView .similarBlock {
+    display: block;
+    
+}
+
+.personInfoBlock.userView .artistInfoBlock,
+.personInfoBlock.userView .similarBlock {
+    display: none;
+    
+}
+
+.similarBlock
+{
+    margin-top: 10px;
+}
+
+.personInfoBlock.artistView .userInfoBlock,
+.personInfoBlock.artistView .subscribeBlock {
+    display: none;
+    
+}
+
+.personInfoBlock.userView .userInfoBlock,
+.personInfoBlock.userView .subscribeBlock {
+    display: block;
+    
+}
+
+.personInfoBlock .sliderContainer
+{
+    padding-top: 10px;
+    height: 138px;
+}
+
+
+
+#personDetailsBlock .userCoverHoverContainer {
+    overflow: hidden;
+    height: 60px;
+    position: relative;
+    z-index: 200;
+    margin-top: -84px;
+    width: 190px;
+    margin-left: 10px;
+}
+
+#personDetailsBlock .userCoverHoverContainer .userCoverHover {
+    width: 190px;
+    height: 60px;
+    background: url(../Images/album/albumCoverHover.png) center top no-repeat;
+    position: relative;
+    z-index: 300;
+    margin: 60px auto 0 auto;
+}
+
+#personDetailsBlock .userCoverHoverContainer .userCoverHover .playBtn{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    background: url(../Images/album/albumCoverHoverPLayBtn.png) 0 0 no-repeat;
+    cursor: pointer;
+}
+#personDetailsBlock .userCoverHoverContainer .userCoverHover .playBtn:hover{
+    background-position: 0 -50px;
+}
+
+#personDetailsBlock .userCoverHoverContainer .userCoverHover .addToPLaylistBtn
+{
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    background: url(../Images/album/albumCoverHoverAddBtn.png) 0 0 no-repeat;
+    cursor: pointer;
+}
+
+#personDetailsBlock .userCoverHoverContainer .userCoverHover .addToPLaylistBtn:hover{
+    background-position: 0 -50px;
+}
+
+#personDetailsBlock .userCoverHoverContainer .userCoverHover .addToPLaylistBtn:hover{
+    background-position: 0 -50px;
+}
+
+#personDetailsBlock .personLikeArea
+{
+    width: 125px;
+    height: 62px;
+    left: -48px;
+    background: url(../Images/album/albumLikeBig.png) no-repeat;
+    margin: 0 0 -62px auto;
+    position: relative;
+    z-index: 300;
+    cursor: pointer;
+}
+
+#personDetailsBlock .personLikeArea:hover
+{
+    background: url(../Images/album/albumLikeBigHover.png) no-repeat;
+}
+

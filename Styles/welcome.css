@@ -1,0 +1,172 @@
+﻿.welcomeBlock {
+    height: 565px; 
+}
+
+.welcomeBlock.welcomeView .eventsPart {
+    display: none;
+}
+
+.welcomeBlock.eventsView .welcomePart {
+    display: none;
+}
+
+.welcomeBlock .topBlock,
+.welcomeBlock .leftBlock,
+.welcomeBlock .rightBlock,
+.welcomeBlock .centerBlock
+{
+    /*cursor: pointer;*/
+    cursor: default !important;
+}
+
+.welcomeBlock .centerBlock
+{
+    display: none;
+}
+
+.welcomeBlock .areaBlock img 
+{
+    position: absolute;
+    z-index: 120;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.welcomeBlock .leftBlock {
+    width: 361px;
+    height: 560px;
+    position: absolute;
+    z-index: 100;
+}
+
+.welcomeBlock .leftBlock.active {
+    background: url("../Images/welcome/leftHover.png") 0 0 no-repeat;
+}
+
+.welcomeBlock .leftBlock .leftContent {
+    width: 195px;
+    margin: 137px 0 0 25px;
+    text-align: center;
+}
+
+.welcomeBlock .leftBlock .leftContent .icon {
+    width: 15px;
+    height: 15px;
+    background: url(../Images/navigation/icons.png) -15px 0 no-repeat;
+    float: left;
+    margin: 0 4px 0 52px;
+}
+
+.welcomeBlock .leftBlock.active .leftContent .icon {
+    background: url(../Images/navigation/icons.png) -15px -15px no-repeat;
+}
+
+.welcomeBlock .rightBlock {
+    width: 361px;
+    height: 560px;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+}
+
+.welcomeBlock .rightBlock.active {
+    background: url("../Images/welcome/rightHover.png") 0 0 no-repeat;
+}
+
+.welcomeBlock .rightBlock .rightContent 
+{
+    width: 195px;
+    margin: 137px 0 0 141px;
+    text-align: center;
+}
+
+.welcomeBlock .rightBlock .rightContent .icon {
+    width: 15px;
+    height: 15px;
+    background: url(../Images/flag.png) 0 0 no-repeat;
+    float: left;
+    margin: 0 4px 0 60px;
+}
+
+.welcomeBlock .rightBlock.active .rightContent .icon {
+    background: url(../Images/flag.png) 0 -15px no-repeat;
+}
+
+
+.welcomeBlock .topBlock 
+{
+    position: absolute;
+    top: 41px;
+    height: 242px;
+    width: 100%;
+    z-index: 100;
+}
+
+.welcomeBlock .topBlock.active {
+    background: url("../Images/welcome/topHover.png") top center no-repeat;
+}
+
+.welcomeBlock .topBlock .topContent {
+    width: 390px;
+    margin: 19px auto 0 auto;
+    text-align: center;
+}
+
+.welcomeBlock .title
+ {
+    font-size: 12px;
+    line-height: 11px;
+    color: #888;
+    font-weight: bold;
+    line-height: 15px;
+    float: left;
+}
+
+.welcomeBlock .text
+ {
+    font-size: 11px;
+    color: #b3b3b3;
+    line-height: 13px;
+    padding-top: 5px;
+    clear: both;
+}
+
+.welcomeBlock .topBlock .topContent .icon {
+    width: 15px;
+    height: 15px;
+    background: url(../Images/magnifier2.png) 0 0 no-repeat;
+    float: left;
+    margin: 0 4px 0 165px;
+}
+
+.welcomeBlock .topBlock.active .topContent .icon {
+    background-position: 0 -15px;
+}
+
+.welcomeBlock .centerBlock {
+    position: absolute;
+    bottom: 0;
+    z-index: 110;
+}
+
+/* welcomeSlider */
+ul.welcomeSlider li {
+    width: 730px;
+    float: left; 
+}
+
+ul.welcomeSlider li div.slideContent {
+    width: 625px;
+    height: 561px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.centerBlock ul.welcomeSlider li div.slideContent  img
+{
+    margin-left: -625px;
+}
+
+.centerBlock.active ul.welcomeSlider li div.slideContent  img
+{
+    margin-left: 0;
+}

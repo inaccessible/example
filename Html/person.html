@@ -1,0 +1,184 @@
+﻿<!--  artistView / userView -->
+<div id="personDetailsBlock" class="personInfoBlock" data-bind="css: { artistView: mode == 'artist', userView: mode == 'user'}">
+    <div data-bind="with: person">
+        <div>
+            <div class="pageName">
+                <span class="icon stars"></span>
+                <span data-bind="text: name"></span>
+            </div>
+        </div>
+
+        <div class="leftSide">
+            <!--            <div class="userImage">
+                                <img src="" alt="" data-bind="visible: image, attr: {src: imageUrl('big')}">
+                            </div>-->
+            
+        <div class="hiddenPanelContainer">
+            <div class="personLikeArea fadePanel" style="display: none;"></div>
+            <div class="userImage">
+                <img src="" alt="" data-bind="visible: image, attr: { src: imageUrl('big') }">
+            </div>
+            <div class="userCoverHoverContainer">
+                <div class="userCoverHover slidePanel">
+                    <div class="playBtn" title="Проиграть Топ 10 треков"></div>
+                    <div class="addToPLaylistBtn" title="Добавить в плеер Топ 10 треков"></div>
+                </div>
+            </div>
+        </div>
+
+            <div class="leftBlockContent subscribe">
+                <span class="icon heartMore"></span><span>Подписаться</span>
+            </div>
+
+            <!--<div class="leftBlockContent giftBlock">
+                <span class="icon gift"></span><span>Подарки</span>
+            </div>
+            <div class="giftBlock">
+                <img src="Images/tempImages/gift.png" alt="" />
+            </div>-->
+        </div>
+        <div class="rightSide">
+            <div class="personHeader" data-bind="click: $parent.toggleInfo">
+                <span class="icon info"></span><span>Информация</span>
+            </div>
+
+            <div class="personRowInfo">
+                <div class="infoBlock artistInfoBlock">
+                    <span class="icon mic"></span><span>Исполнитель</span>
+                </div>
+                <div class="infoBlock userInfoBlock">
+                    <span class="icon headphones"></span><span>Слушатель</span>
+                </div>
+<!--                <div class="infoBlock">
+                    <span class="icon heart"></span><span data-bind="text: stats.rank"></span>
+                </div>-->
+                <div class="infoBlock">
+                    <span class="icon heartArrow"></span>
+                    <span data-bind="foreach: styles">
+                        <span class="fieldData" data-bind="text: name, click: $parents[1].searchByStyle, clickBubble: false"></span><span data-bind="if: $index() < ($parent.styles.length - 1)">,</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="personHeader" data-bind="click: $parent.openTracks">
+                <span class="icon note"></span><span>Треки</span>
+            </div>
+            <div class="shortTrackBlock" data-bind="foreach: tracks">
+                <div class="trackInfo short" data-bind="click: openCleanDetails, css: { thirdShortRow: $index() == 2 }">
+                    <div class="resultPlayButton" data-bind="click: addToStart, clickBubble: false"></div>
+                    <div class="resultaddToPlaylist" data-bind="click: addToEnd, clickBubble: false, css: {active: isAdded}" title="Добавить в плеер"></div>
+                    <div class="trackNumber" data-bind="text: $index() + 1"></div>
+                    <div class="resultTrackName" data-bind="text: title"></div>
+                    <div class="resultArtist" data-bind="foreach: artists">
+                        <a data-bind="text: name, click: openCleanDetails, clickBubble: false"></a><span data-bind="    if: $index() < ($parent.artists.length - 1)">,</span>
+                    </div>
+                    <div class="resultLikesAmount" data-bind="visible: stats.likes > 0"><a data-bind="text: stats.likes"></a></div>
+                    <div class="resultTrackTime" data-bind="text: time"></div>
+                    <div class="resultBnts">
+                        <span class="icon addToFavDark" title="Добавить в избранное"></span>
+                        <span class="icon triangle" data-bind="click: $root.onFavoriteClick, clickBubble: false">
+                            <div class="dropTriangleDownHoverFix"></div>
+                            <div class='dropDownBlock' style="display: none;">
+                                <div class='dropmenuArrow'></div>
+                                <ul class='subNavigation'>
+                                    <li><a href='#'>
+                                            <span class='icon addToFavDark'></span>
+                                            Добавить в избранное</a></li>
+                                    <li><a href='#'>
+                                            <span class='icon share'></span>
+                                            Поделиться</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href='#'>
+                                            <span class='icon sendToWall'></span>
+                                            Отправить на стену</a></li>
+                                    <li><a href='#'>
+                                            <div class='subnavIcons addToPLaylist'></div>
+                                            Добавить в плейлист</a></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="personHeader" data-bind="click: $parent.openAlbums">
+                    <span class="icon album"></span><span>Альбомы</span>
+                </div>
+                <div class="sliderContainer">
+                    <ul class="sliderBlock" data-bind="foreach: albums">
+                        <li class="slider">
+                            <div class="cover hiddenPanelContainer" data-bind="click: $parents[1].openAlbum">
+                                <div class="noImageHolderNoBorder">
+                                    <img src="" alt="" height="100" width="100" data-bind="attr: {src: imageUrl('large')}" />
+                                </div>
+                                <div class="coverHoverHolderSmall">
+                                    <div class="coverHover slidePanel">
+                                        <div class="playBtn" data-bind="click: play, clickBubble: false"></div>
+                                        <div class="playListBtn" data-bind="click: append, clickBubble: false" title="Добавить в плеер"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="albumName" data-bind="text: name"></div>
+                            <!--<div class="likesBlock">
+                                    <div></div>
+                                    <span>100</span>
+                                </div>-->
+                        </li>
+                    </ul>
+                    <div class="slider_prev_shadow">
+                        <div class="slider_prev"></div>
+                    </div>
+                    <div class="slider_next_shadow">
+                        <div class="slider_next"></div>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="similarBlock">
+                <div class="personHeader">
+                    <span class="icon similar"></span><span>Похожие</span>
+                </div>
+                <div class="similarContainer" data-bind="foreach: similars">
+                    <div class="similarBLock">
+                        <div class="cover hiddenPanelContainer" data-bind="click: openDetails">
+                            <div class="noImageHolderNoBorder">
+                                <img src="" alt="" height="50" width="50" data-bind="attr: {src: imageUrl('medium')}"/>
+                            </div>
+                            <div class="coverHoverHolder50">
+                                <div class="coverHover slidePanel">
+                                    <div class="playBtn" data-bind="click: play, clickBubble: false"></div>
+                                    <div class="playListBtn" data-bind="click: play, clickBubble: false" title="Добавить в плеер" ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>Исполнитель: </span>
+                            <span class="similarArtistName" data-bind="text: name, click: openDetails, clickBubble: false"></span>
+                        </div>
+                        <!--<div class="rankBlock">
+                                <a href='#'><span class="icon heart"></span><span data-bind="text: stats.rank"></span></a>
+                            </div>-->
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            
+            <div class="subscribeBlock">
+                <div class="personHeader">
+                    <span class="icon similar"></span><span>Подписки</span>
+                </div>
+                <div class="noDataContent" >
+                    Нет подписок
+                </div>
+            </div>          
+            
+            <div style="height: 60px">
+                <!--Space holder to enable content scrolling above player block -->
+            </div>
+        </div>
+        
+        <div style="clear: both;"></div>
+    </div>
+</div>

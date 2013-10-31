@@ -1,0 +1,150 @@
+﻿<div class="trackBlock rightPartHolder">
+    <div class="rightContainer">
+        <div class="trackInfoHeader headingRow">
+            <div class="icon"></div>
+            <div>Выбранный трек</div>
+        </div>
+        <div data-bind="fadeoutOrShow: !track()">
+            <div class="pageLoaderBlock"></div>
+        </div>
+        <div data-bind="fadeinOrHide: track">
+            <div data-bind="with: track()">
+                <!-- CONTEXT: 'TrackVM.track()'
+                    trackInfo is a track line as at search results -->
+                <div class="trackInfo" data-bind="click: openDetails">
+                    <div class="resultPlayButton" data-bind="click: addToStart"></div>
+                    <div class="resultaddToPlaylist" data-bind="click: addToEnd, css: {active: isAdded}" title="Добавить в плеер"></div>
+                    <div class="resultTrackName" data-bind="text: title"></div>
+                    <div class="resultArtist" data-bind="foreach: artists">
+                        <a data-bind="text: name, click: openCleanDetails, clickBubble: false"></a><span data-bind="    if: $index() < ($parent.artists.length - 1)">,</span>
+                    </div>
+                    <div class="resultLikesAmount" data-bind="visible: stats.likes > 0"><a data-bind="text: stats.likes"></a></div>
+                    <div class="resultTrackTime" data-bind="text: time"></div>
+                    <div class="resultBnts">
+                        <span class="icon addToFavDark" title="Добавить в избранное"></span>
+                        <span class="icon triangle" data-bind="click: $root.onFavoriteClick, clickBubble: false">
+                            <div class="dropTriangleDownHoverFix"></div>
+                            <div class='dropDownBlock' style="display: none;">
+                                <div class='dropmenuArrow'></div>
+                                <ul class='subNavigation'>
+                                    <li><a href='#'>
+                                            <span class='icon addToFavDark'></span>
+                                            Добавить в избранное</a></li>
+                                    <li><a href='#'>
+                                            <span class='icon share'></span>
+                                            Поделиться</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href='#'>
+                                            <span class='icon sendToWall'></span>
+                                            Отправить на стену</a></li>
+                                    <li><a href='#'>
+                                            <div class='subnavIcons addToPLaylist'></div>
+                                            Добавить в плейлист</a></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <!-- CONTEXT: 'TrackVM.track()' 
+                    albumBlock is extended info with album image and additional track info -->
+                <div class="albumBlock">
+                    <div class="cover hiddenPanelContainer" data-bind="click: album.openCleanDetails">
+                        <div class="noImageHolder">
+                            <img src="" alt="" data-bind="visible: imageId, attr: {src: getImageUrl('large')}" />
+                        </div>
+                        <!--<div class="number">1</div>-->
+                        <div class="coverHoverHolderSmall">
+                            <div class="coverHover slidePanel">
+                                <div class="playBtn" data-bind="click: $parent.playAlbum, clickBubble: false"></div>
+                                <div class="playListBtn" data-bind="click: $parent.appendAlbum, clickBubble: false" title="Добавить в плеер"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="albumInfo">
+                        <div data-bind="with: album">
+                            <span>Альбом:</span>
+                            <a href="#" data-bind="text: name, click: openCleanDetails, clickBubble: false"></a>
+                        </div>
+                        <!--<div><span>Дата:</span> 08.06.2012</div>-->
+                        <div>
+                            <span>Жанр:</span>
+                            <span data-bind="foreach: genres">
+                                <a href="#" data-bind="text: name, click: $parents[1].searchByGenre, clickBubble: false"></a><span data-bind="if: $index() < ($parent.genres.length - 1)">,</span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Стиль:</span>
+                            <span data-bind="foreach: styles">
+                                <a href="#" data-bind="text: name, click: $parents[1].searchByStyle, clickBubble: false"></a><span data-bind="if: $index() < ($parent.styles.length - 1)">,</span>
+                            </span>
+                            <!--<div><span>Загрузил:</span> <a href="#">хуй с горы</a></div>-->
+                        </div>
+                        <!--<div class="albumInfoIcos">
+                                <div class="cameraIcon"></div>
+                                <div class="playlistaIcon"></div>
+                                <div style="clear: both;"></div>
+                            </div>-->
+                    </div>
+                </div>
+            </div>
+        
+            <!-- CONTEXT: 'TrackVM' -->
+            <div class="trackInfoFooter headingRow">
+                <div class="leftPart">
+                    <div class="icon alsoLikedIco"></div>
+                    <span>Оценившие этот трек так же оценили: </span>
+                </div>
+                <div class="rightPart">
+                    <div class="numberOfTracks" data-bind="text: similars().length"></div>
+                    <div class="playBtn" data-bind="click: playSimilars"></div>
+                </div>
+            </div>
+
+            <div id="similarTracks" data-bind="foreach: similars">
+                <div class="trackInfo" data-bind="click: openDetails, visible: ($index() < 5 || $parent.showAll())">
+                    <div class="resultPlayButton" data-bind="click: addToStart, clickBubble: false"></div>
+                    <div class="resultaddToPlaylist" data-bind="click: addToEnd, clickBubble: false, css: {active: isAdded}" title="Добавить в плеер"></div>
+                    <div class="resultTrackName" data-bind="text: title"></div>
+                    <div class="resultArtist" data-bind="foreach: artists">
+                        <a data-bind="text: name, click: openCleanDetails, clickBubble: false"></a><span data-bind="if: $index() < ($parent.artists.length - 1)">,</span>
+                    </div>
+                    <div class="resultLikesAmount" data-bind="visible: stats.likes > 0"><a data-bind="text: stats.likes"></a></div>
+                    <div class="resultTrackTime" data-bind="text: time"></div>
+                    <div class="resultBnts">
+                        <span class="icon addToFavDark" title="Добавить в избранное"></span>
+                        <span class="icon triangle" data-bind="click: $root.onFavoriteClick, clickBubble: false">
+                            <div class="dropTriangleDownHoverFix"></div>
+                            <div class='dropDownBlock' style="display: none;">
+                                <div class='dropmenuArrow'></div>
+                                <ul class='subNavigation'>
+                                    <li><a href='#'>
+                                            <span class='icon addToFavDark'></span>
+                                            Добавить в избранное</a></li>
+                                    <li><a href='#'>
+                                            <span class='icon share'></span>
+                                            Поделиться</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href='#'>
+                                            <span class='icon sendToWall'></span>
+                                            Отправить на стену</a></li>
+                                    <li><a href='#'>
+                                            <div class='subnavIcons addToPLaylist'></div>
+                                            Добавить в плейлист</a></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='moreRow' data-bind="click: toggleShowAll, visible: !showAll()">
+                eщё<div></div>
+            </div>
+            <div class='lessRow' data-bind="click: toggleShowAll, visible: showAll()">
+                <span>свернуть</span><div></div>
+            </div>
+<!--            <div style="height: 62px;">
+                <!--  space holder to be able to see toggle buttons on top of player-->
+            <!-- </div>-->
+        </div>
+    </div>
+</div>

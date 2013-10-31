@@ -1,0 +1,198 @@
+﻿#headerNavigation
+{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 33px;
+    margin: 1px 7px 0 0;
+    float: right;
+    width: auto;
+}
+#headerNavigation ul li.topNavigatiobEl
+{
+    display: block;
+    height: 33px;
+    float: left;
+    cursor: pointer;
+}
+        
+#headerNavigation ul li.topNavigatiobEl:hover
+{
+    background-position: center -35px;
+}
+        
+#navigationMyPage
+{
+    width: 28px;
+    height: 33px;
+    background: url(../Images/navigation/myPage.png) center -1px no-repeat;
+    margin-right: 5px;
+}
+
+#navigationMyPage:hover
+{
+    background-position: 0 -35px ;
+}
+
+#navigationMyNews
+{
+    width: 28px;
+    height: 33px;
+    background: url(../Images/navigation/myNews.png) center -1px no-repeat;
+    margin-right: 5px;
+}
+
+#navigationMyNews:hover
+{
+    background-position: 0 -35px;
+}
+
+#navigationMusic
+{
+    width: 59px;
+    background: url(../Images/navigation/music.png) center -1px no-repeat;
+}
+        
+#navigationVideo
+{
+    width: 51px;
+    background: url(../Images/navigation/video.png) center -1px no-repeat;
+}
+        
+#navigationEvents
+{
+    width: 64px;
+    background: url(../Images/navigation/events.png) center -1px no-repeat;
+}
+        
+#navigationPeople
+{
+    width: 49px;
+    background: url(../Images/navigation/people.png) center -1px no-repeat;
+}
+
+/* sub navigation */
+.headerNavigationFix
+{
+    width: 40px; 
+    height:40px; 
+    position: absolute; 
+    top: -35px; 
+    left: 40px;
+}
+
+ul.subNavigation li a
+{
+    color: #777777;
+}
+
+ul.subNavigation li
+{
+    border: 1px solid transparent; 
+    text-align: left;
+    line-height: 22px;
+    height: 22px;
+    display: block;
+    padding-left: 5px;
+}
+
+ul.subNavigation li:hover
+{
+    border: 1px solid #eee;
+    background: url(../Images/navigation/menu_hover.jpg) left top repeat-x;
+}
+
+ul.subNavigation li:hover a
+{
+    color: #528fc2;
+}
+
+/*ul.subNavigation li.hr
+{
+    height: 1px;
+    border-top: 1px solid #ebebeb;
+    margin: 3px auto
+}*/
+        
+ul.subNavigation li a div.subnavIcons
+{
+    width: 15px;
+    height: 15px;
+    float: left;
+    background-image: url('../Images/navigation/icons.png');
+    margin: 3px 3px 0 0;
+}
+
+ul.subNavigation span.icon
+{
+    margin-top: 3px;
+    margin-right: 3px;
+}
+        
+#headerNavigation ul.subNavigation li div.noticeDot
+{
+    background: url('../Images/navigation/notice_dot.jpg') center right no-repeat;
+    width: 3px;
+    height: 3px;
+    float: right;
+    margin: 9px 3px 0 0 ;
+}
+        
+#headerNavigation ul.subNavigation li a div.allPage
+{
+    background-position: -15px 0; 
+}
+        
+#headerNavigation ul.subNavigation li:hover a div.allPage
+{
+    background-position: -15px -15px; 
+}
+        
+#headerNavigation ul.subNavigation li a div.music
+{
+    background-position: -30px 0; 
+}
+        
+#headerNavigation ul.subNavigation li:hover a div.music
+{
+    background-position: -30px -15px; 
+}
+        
+#headerNavigation ul.subNavigation li a div.video
+{
+    background-position: -75px 0; 
+}
+        
+#headerNavigation ul.subNavigation li:hover a div.video
+{
+    background-position: -75px -15px; 
+}
+        
+#headerNavigation ul.subNavigation li a div.events
+{
+    background-position: 0 0; 
+}
+        
+#headerNavigation ul.subNavigation li:hover a div.events
+{
+    background-position: 0 -15px; 
+}
+        
+#headerNavigation ul.subNavigation li a div.subscribe
+{
+    background-position: -60px 0; 
+}
+        
+#headerNavigation ul.subNavigation li:hover a div.subscribe
+{
+    background-position: -60px -15px; 
+}
+        
+#headerNavigation ul.subNavigation li a div.notice
+{
+    background-position: -45px 0; 
+}
+        
+#headerNavigation ul.subNavigation li:hover a div.notice
+{
+    background-position: -45px -15px; 
+}
+        

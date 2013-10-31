@@ -1,0 +1,265 @@
+﻿.trackBlock .trackInfoHeader .icon{
+    background: url(../Images/note1.png) 0 0 no-repeat;
+}
+
+.albumBlock {
+    height: 120px;
+    text-align: left;
+    padding: 15px 12px 0 3px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.albumBlock .cover {
+    float: left;
+    width: 114px;
+    height: 111px;
+    background: url(../Images/player/Cover_Border.png) center top no-repeat;
+    padding: 2px 0 0 15px;
+    float: left;
+    cursor: pointer;
+}
+
+.albumBlock .cover .noImageHolder
+{
+    width: 100px;
+    height: 100px;
+    background: url(../Images/no-image100x100.png) center top no-repeat;
+}
+
+.albumBlock .cover .number{
+    background: url(../Images/coverNumberBg.png);
+    width: 29px;
+    height: 19px;
+    color: #777;
+    text-shadow: 2px 2px 1px #fff;
+    line-height: 12px;
+    font-size: 10px;
+    margin: -30px 0 0 -6px;
+    position: relative;
+    text-align: center;
+    z-index: 50;
+}
+
+.albumBlock .cover .coverHoverHolderSmall {
+    height: 35px;
+    width: 104px;
+    overflow: hidden;
+    position: relative;
+    margin-top: -35px;
+    margin-left: -2px;
+    z-index: 100;
+
+}
+
+.albumBlock .cover .coverHover, 
+ul.sliderBlock .slider .coverHover{
+    width: 67px;
+    height: 35px;
+    background: url(../Images/cover_hover.png) 0 0 no-repeat;
+    position: relative;
+    margin-top: 35px;
+    padding: 4px 18px 0 18px;
+}
+
+ul.sliderBlock .slider .coverHover {
+    width: 63px;
+    padding: 4px 20px 0 20px;
+}
+
+.albumBlock .cover .coverHover .playBtn, ul.sliderBlock .slider .coverHover .playBtn{
+    width: 30px;
+    height: 30px;
+    background: url(../Images/coverHoverPlay.png) 0 -30px no-repeat;
+    float: left;
+}
+
+.albumBlock .cover .coverHover .playBtn:hover, ul.sliderBlock .slider .playBtn:hover {
+    background-position: 0 0;
+}
+
+.albumBlock .cover .coverHover .playListBtn, ul.sliderBlock .slider  .playListBtn{
+    width: 30px;
+    height: 30px;
+    background: url(../Images/coverHoverPlaylist.png) 0 -30px no-repeat;
+    float: right;
+}
+
+.albumBlock .cover .coverHover .playListBtn:hover, ul.sliderBlock .slider .playListBtn:hover {
+    background-position: 0 0;
+}
+
+.albumBlock .albumInfo {
+    float: left;
+    overflow: hidden;
+    width: 355px;
+    cursor: default;
+}
+
+.albumBlock .albumInfo span{
+    color: #b3b3b3;
+}
+
+.albumBlock .albumInfo div {
+    color: #b3b3b3;
+    line-height: 20px;
+}
+
+.albumBlock .albumInfoIcos {
+    float: right;
+    width: 34px;
+    margin-top: -4px;
+}
+
+.albumBlock .albumInfoIcos .cameraIcon {
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url("../Images/camera.png") 0 0 no-repeat;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.albumBlock .albumInfoIcos .cameraIcon:hover{
+    background-position: 0 -15px;
+}
+
+.albumBlock .albumInfoIcos .playlistaIcon{
+    float: right;
+    width: 15px;
+    height: 15px;
+    background: url("../Images/playlist.png") 0 0 no-repeat;
+    cursor: pointer;
+}
+
+.albumBlock .albumInfoIcos .playlistaIcon:hover{
+    background-position: 0 -15px;
+}
+
+.trackBlock .trackInfoFooter .leftPart
+{
+    float: left;
+    height: 35px;
+}
+
+.trackBlock .trackInfoFooter .leftPart .alsoLikedIco
+{
+    background: url(../Images/alsoLiked.png) 0 0 no-repeat;
+}
+
+.trackBlock .trackInfoFooter .rightPart
+{
+    float: right;
+    height: 35px;
+}
+
+.trackBlock .trackInfoFooter .rightPart .numberOfTracks
+{
+    width: 15px;
+    margin-right: 8px;
+    float: left;
+    overflow: hidden;
+    color: #b3b3b3;
+    line-height: 40px;
+}
+
+.trackBlock .trackInfoFooter .rightPart .playBtn
+{
+    width: 15px;
+    height: 15px;
+    float: right;
+    margin-top: 14px;
+    cursor: pointer;
+    background: url(../Images/trackPlayBtn.png) 0 0 no-repeat;
+}
+
+.trackBlock .trackInfoFooter .rightPart .playBtn:hover
+{
+    background-position: 0 -15px;
+}
+
+.trackBlock .moreRow, .trackBlock .lessRow {
+    width: 556px;
+    height: 32px;
+    border-bottom: 1px solid #ebebeb;
+/*    border-top: 1px solid #fdfdfd;*/
+    line-height: 32px;
+    -moz-box-shadow: 0 2px 2px 0 #fff;
+    -webkit-box-shadow: 0 2px 2px 0 #fff;
+    box-shadow: 0 2px 2px 0 #fff;
+    text-align: center;
+    cursor: pointer;
+    color: #3c79ab;
+}
+
+.trackBlock .moreRow:hover div{
+    background-position: 0 -15px;
+}
+
+.trackBlock .moreRow:hover, .trackBlock .lessRow:hover {
+    color: #72b4ec;
+}
+
+.trackBlock .moreRow div {
+    width: 15px;
+    height: 12px;
+    background: url(../Images/arrowDown.png) 0 0 no-repeat;
+    display: inline-block;
+    margin: 7px 0 0 5px;
+}
+
+.trackBlock .lessRow div {
+    width: 15px;
+    height: 12px;
+    background: url(../Images/arrowUp.png) 0 0 no-repeat;
+    display: inline-block;
+    margin: 7px 0 0 5px;
+}
+
+.trackBlock .lessRow:hover div{
+    background-position: 0 -15px;
+}
+
+/* short track block*/
+
+.shortTrackBlock {
+    margin-bottom: 16px;
+    margin-top: 14px;
+    border: 1px solid #FFF;
+    width: 475px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,0.2), 1px 2px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 2px 4px rgba(0, 0, 0, 0.2);
+    height: 99px;
+}
+
+.trackInfo.short {
+    width: 450px;
+    margin: auto;
+    margin-top: -1px;
+}
+
+.trackInfo.short:hover {
+    /*margin-top: -2px;*/
+}
+
+.trackInfo.short .resultTrackName {
+    width: 125px;
+    margin-right: 10px;
+}
+
+.trackInfo.short:hover .resultTrackName {
+    width: 93px;
+}
+
+.trackInfo.short .resultArtist {
+    width: 155px;
+    margin: 0 10px;
+}
+
+.trackInfo.short.thirdShortRow {
+    border: 1px solid transparent;
+}
+

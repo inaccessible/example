@@ -1,0 +1,57 @@
+﻿<div class="tracksBlock rightPartHolder">
+    <div class="rightContainer">
+        <div class="rightSearchBlock">
+            <div class="searchCancel" data-bind="click: clearQuery, css: { cancel:  hasQuery }"></div>
+            <input class="searchBar" placeholder="Поиск по" data-bind="value: query, valueUpdate: 'afterkeydown', event: { keyup: onQueryKeyUp }" />
+            <div class="searchCriterion" data-bind="fancyDrop: searchModes, value: searchMode"></div>
+            <div class="searchLoader" data-bind="visible: loadMgr.isSearching" style="display: none;">
+                <img src="./Images/loader.gif" alt="" />
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="searchResult">
+            <div class="searchResultInfo">У нас <span data-bind="text: totalCount"></span> треков</div>
+            <div>
+                <div data-bind="foreach: items">
+                    <div class="trackInfo" data-bind="click: openCleanDetails">
+                        <div class="resultPlayButton" data-bind="click: addToStart, clickBubble: false"></div>
+                        <div class="resultaddToPlaylist" data-bind="click: addToEnd, clickBubble: false, css: {active: isAdded}" title="Добавить в плеер"></div>
+                        <div class="resultTrackName" data-bind="text: title"></div>
+                        <div class="resultArtist" data-bind="foreach: artists">
+                            <a data-bind="text: name, click: openCleanDetails, clickBubble: false"></a><span data-bind="if: $index() < ($parent.artists.length - 1)">,</span>
+                        </div>
+                        <div class="resultLikesAmount" data-bind="visible: stats.likes > 0"><a data-bind="text: stats.likes"></a></div>
+                        <div class="resultTrackTime" data-bind="text: time"></div>
+                        <div class="resultBnts">
+                            <span class="icon addToFavDark"  title="Добавить в избранное"></span>
+                            <span class="icon triangle" data-bind="click: $root.onFavoriteClick, clickBubble: false">
+                                <div class="dropTriangleDownHoverFix"></div>
+                                <div class='dropDownBlock' style="display: none;">
+                                    <div class='dropmenuArrow'></div>
+                                    <ul class='subNavigation'>
+                                        <li><a href='#'>
+                                                <span class='icon addToFavDark'></span>
+                                                Добавить в избранное</a></li>
+                                        <li><a href='#'>
+                                                <span class='icon share'></span>
+                                                Поделиться</a></li>
+                                        <li class="separator"></li>
+                                        <li><a href='#'>
+                                                <span class='icon sendToWall'></span>
+                                                Отправить на стену</a></li>
+                                        <li><a href='#'>
+                                                <div class='subnavIcons addToPLaylist'></div>
+                                                Добавить в плейлист</a></li>
+                                    </ul>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lineLoader" data-bind="visible: loadMgr.isLoadingPage" >
+                    <img src="./Images/loader.gif" alt=""  />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

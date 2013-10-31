@@ -1,0 +1,30 @@
+﻿.pagerBlock {
+    background: url(../Images/pagerBg.png) no-repeat;
+    width: 22px;
+    height: 34px;
+    position: fixed;
+    top: 62px;
+    right: 7px;
+    color: #aeaeae;
+    text-align: center;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 5px 0;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.pagerBlock:hover .playBtn{
+    background-position: 0 -15px;
+}
+
+.pagerBlock:hover {
+    color: #72b4ec;
+}
+
+.pagerBlock .playBtn {
+    background: url(../Images/trackPlayBtn.png) no-repeat;
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+}

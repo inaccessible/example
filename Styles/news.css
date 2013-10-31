@@ -1,0 +1,24 @@
+﻿.newsBlock .newsText {
+    width: 445px;
+    margin: 170px auto 0 auto;
+    font-size: 11px;
+    color: #B3B3B3;
+    line-height: 13px;
+    height: 346px;
+}
+
+.newsBlock .newsText .newsTitle {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.newsBlock ul {
+    list-style-image:url('../Images/newsLiIco.jpg');
+    list-style-position:inside;
+}
+
+.newsBlock ul li {
+    margin-top: 3px;
+    line-height: 15px;
+}
+

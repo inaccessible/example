@@ -1,0 +1,84 @@
+﻿.albumsBLock .albumBlock .albumInfoIcos {
+    display: none;
+}
+
+.albumsBLock .albumBlock:hover .albumInfoIcos 
+{
+    display: block;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .addTofavorit
+{
+    width: 15px;
+    height: 15px;
+    float: left;
+    cursor: pointer;
+    background: url(../Images/player/playerBtns.png) -25px -44px no-repeat;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .addTofavorit:hover
+{
+    background-position: -25px -66px;
+}
+
+/*.albumsBLock .albumBlock .albumInfoIcos .triangle
+{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../Images/player/headerIcons.png) -85px 3px no-repeat;
+    float: right;
+}*/
+
+/*.albumsBLock .albumBlock .albumInfoIcos .triangle:hover {
+    background-position: -85px -12px;
+}*/
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle:hover .dropDownBlock {
+    display: block !important;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle .dropDownBlock.albumDropListShist {
+    margin-left: -150px;
+    margin-top: 40px;
+    width: 160px;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle .dropDownBlock.albumDropListShist .dropmenuArrow {
+    left: 148px;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle .dropDownBlock .subnavIcons {
+    display: block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url("../Images/player/headerIcons.png") 0 0 no-repeat;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle .dropDownBlock .subnavIcons.likeIt {
+    background-position: -37px 0;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle .dropDownBlock a:hover .likeIt  {
+    background-position: -37px -15px;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle .dropDownBlock .subnavIcons.addToFavorite {
+    background: url(../Images/player/playerBtns.png) -25px -47px no-repeat;
+}
+
+.albumsBLock .albumBlock .albumInfoIcos .triangle .dropDownBlock a:hover .addToFavorite  {
+    background-position: -25px -69px;
+}
+
+/* remove shadow from slider */
+.fullAlbumInfoBlock .sliderContainer .slider_prev_shadow
+{
+    background-image: none;
+}
+
+.fullAlbumInfoBlock .sliderContainer .slider_next_shadow
+{
+    background-image: none;
+}

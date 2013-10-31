@@ -1,0 +1,69 @@
+﻿<div class="welcomeBlock" data-bind="visible: isVisible">
+    <div class="topBlock welcomePart">
+              <div class="topContent">
+                  <div class="icon"></div><div class="title">Поиск</div>
+                  <div class="text">Музыкальная сеть, с ежедневно обновляемой и организованной по жанрам музыкой</div>
+              </div>
+          </div>
+
+    <div class="leftBlock welcomePart">
+        <div class="leftContent">
+            <div class="icon"></div><div class="title">Избранное</div>
+            <div class="text">Ваша музыка, организованная по жанрам</div>
+        </div>
+    </div>
+
+    <div class="rightBlock welcomePart">
+        <div class="rightContent">
+            <div class="icon"></div><div class="title">Новости</div>
+            <div class="text">Обмен музыкой с исполнителями и слушателями</div>
+        </div>
+    </div>
+
+    <div class="slider_prevBig"></div>
+    <div class="slider_nextBig"></div>
+    <div class="centerBlock" >
+        <ul class="welcomeSlider" id="welcomeEventSilder"  data-bind="foreach: sliderData">
+            <li data-bind="attr: {'data-title': title, 'data-file': fileName}">
+                <div class="slideContent">
+                    <div class="eventDetails eventsPart">
+                        <div>
+                            <div class="title icon notes" data-bind="text: title" ></div>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div class="text" data-bind="text: title"></div>
+                    </div>
+                    <img src="" alt=""  data-bind="attr: {src: imageUrl}"/>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="areaBlock">
+        <img src="./Images/0.gif" width="730px" height="556px" alt="" usemap="#navigation" hidefocus="true" style=" outline: none;" />
+    </div>
+    
+    <map name="navigation">
+        <area shape="poly" coords="87,0,228,121,235,90,449,87,472,145,645,0" 
+              class="rightPart welcomePart" data-hover="topBlock" href="javascript:void(0);" data-bind="click: goToTracks" >
+        <area shape="poly" coords="0,0,87,0,226,119,111,565,0,565,0,338,55,338,58,213,0,211" 
+              class="leftPart welcomePart" data-hover="leftBlock" href="javascript:void(0);" >
+        <area shape="poly" coords="645,0,472,146,632,565,731,565,731,0"
+              class="topPart welcomePart"  data-hover="rightBlock" href="javascript:void(0);" data-bind="click: goToNews">
+        <area shape="poly" coords="111,565,235,90,449,87,632,565" 
+              class="eventArea" data-hover="centerBlock" href="javascript:void(0);" data-bind="click: showPopup">
+    </map>
+</div>
+
+
+<script>
+    $('body').on('mouseover', 'area', function () {
+        var dataClass = $(this).attr('data-hover');
+        $('.' + dataClass).addClass('active');
+    });
+
+    $('body').on('mouseout', 'area', function () {
+        var dataClass = $(this).attr('data-hover');
+        $('.' + dataClass).removeClass('active');
+    });
+</script>

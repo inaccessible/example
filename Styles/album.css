@@ -1,0 +1,157 @@
+﻿.fullAlbumInfoBlock .albumInfoHeader .icon {
+    background: url(../Images/folderIcon.png) no-repeat;
+}
+
+.fullAlbumInfoBlock .albumLikeArea {
+    width: 125px;
+    height: 62px;
+    top: 2px;
+    left: -125px;
+    background: url(../Images/album/albumLikeBig.png) no-repeat;
+    margin: 0 0 -62px auto;
+    position: relative;
+    z-index: 300;
+}
+
+.fullAlbumInfoBlock .albumLikeArea:hover {
+    background: url(../Images/album/albumLikeBigHover.png) no-repeat;
+}
+
+.fullAlbumInfoBlock .albumCover {
+    width: 376px;
+    height: 349px;
+    margin: 20px auto;
+    background: url(../Images/album/CoverBorder.png) 0 0 no-repeat;
+    cursor: pointer;
+
+}
+
+.fullAlbumInfoBlock .albumCover img {
+    margin:  1px 0 0 27px;
+    position: relative;
+    z-index: 200;
+    border: 1px solid #fcfcfc;
+}
+
+.fullAlbumInfoBlock .albumCover .albumCoverHover {
+    width: 320px;
+    height: 101px;
+    background: url(../Images/album/albumCoverHover.png) center top no-repeat;
+    position: relative;
+    z-index: 300;
+    margin: 101px auto 0 auto;
+}
+
+.fullAlbumInfoBlock .albumCover .albumCoverHoverContainer {
+    /*border: 1px solid #f00;*/
+    overflow: hidden;
+    height: 101px;
+    position: relative;
+    z-index: 200;
+    margin-top: -101px
+}
+
+.fullAlbumInfoBlock .albumCover .albumCoverHover .playBtn {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 76px;
+    margin-top: 30px;
+    background: url(../Images/album/albumCoverHoverPLayBtn.png) 0 0 no-repeat;
+
+}
+
+.fullAlbumInfoBlock .albumCover .albumCoverHover .playBtn:hover {
+    background-position: 0 -50px;
+}
+
+.fullAlbumInfoBlock .albumCover .albumCoverHover .addToPLaylistBtn {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-right: 76px;
+    margin-top: 30px;
+    background: url(../Images/album/albumCoverHoverAddBtn.png) 0 0 no-repeat;
+}
+
+.fullAlbumInfoBlock .albumCover .albumCoverHover .addToPLaylistBtn:hover {
+    background-position: 0 -50px;
+}
+
+
+.fullAlbumInfoBlock .fullAlbumInfodescription  {
+    width: 520px;
+    margin: 0 auto;
+    color: #b3b3b3;
+    padding-bottom: 15px;
+}
+
+.fullAlbumInfoBlock .fullAlbumInfodescription  div{
+    line-height: 20px;
+}
+
+.fullAlbumInfodescription .heart, .albumInfo .heart {
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url("../Images/player/headerIcons.png") -37px 3px no-repeat;
+ }
+ 
+.fullAlbumInfodescription .rankBlock:hover .heart, .albumInfo .rankBlock:hover .heart{
+    background-position: -37px -12px;
+ }
+ 
+.fullAlbumInfodescription .rankBlock:hover span, .albumInfo .rankBlock:hover span {
+    color: #72b4ec;
+ }
+ 
+ .fullAlbumInfoBlock .fullAlbumInfodescription .albumDescription {
+    width: 100%;
+    color: #888;
+    white-space: normal !important;
+    overflow: hidden;
+    line-height: 16px;
+ }
+ 
+ .fullAlbumInfoBlock .fullAlbumInfodescription .more {
+     float: right;
+     cursor: pointer;
+     color: #3c79ab;
+     margin-top: -2px;
+ }
+ 
+ .fullAlbumInfoBlock .fullAlbumInfodescription .more:hover {
+    color: #72b4ec;
+ }
+ 
+ .fullAlbumInfoBlock .trackListInfoRow div {
+     float: left;
+ }
+ 
+ .fullAlbumInfoBlock .trackListInfoRow div.icon {
+     background: url(../Images/trackList.png) 0 0 no-repeat;
+ }
+ 
+ .fullAlbumInfoBlock .trackListInfoRow div.trackAmount {
+     float: right;
+ }
+ .fullAlbumInfoBlock .trackListInfoRow div.trackAmount span{
+     margin-right: 5px;
+ }
+ 
+ .fullAlbumInfoBlock .alsoLiked {
+     margin-bottom: 14px;
+ }
+
+ .fullAlbumInfoBlock .alsoLiked .icon{
+     background: url(../Images/alsoLiked.png) 0 0 no-repeat;
+ }
+
+ .fullAlbumInfoBlock .alsoLiked div{
+     float: left;
+ }
+ 
+ .fullAlbumInfoBlock .alsoLiked div.likesAmount{
+     float: right;
+ }
+ 

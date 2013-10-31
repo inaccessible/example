@@ -1,0 +1,19 @@
+﻿<div id="userInfoBlock" class="artistDetails" style="display: none;" data-bind="with: person">
+    <div class="pageName" data-bind="click: $parent.toggleInfo">
+        <span class="icon info"></span>
+        <span data-bind="text: name"></span>
+    </div>
+    <div class="artistDetailsContent">
+        <div class="artistDetailsInfoBlock" data-bind="click: $parent.toggleInfo">
+            <span class="icon"></span>
+            <span class="fieldDescription">Слушатель: </span>
+            <span class="fieldData" data-bind="text: name"></span>
+        </div>
+
+        <div class="artistDetailsInfoBlock">
+            <span class="icon"></span>
+            <span class="fieldDescription">Основное: </span>
+            <span>21год Россия Москва</span>
+        </div>        
+    </div>
+</div>

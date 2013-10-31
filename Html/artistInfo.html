@@ -1,0 +1,72 @@
+﻿<div class="artistDetails" style="display: none;" data-bind="with: person">
+    <div class="pageName" data-bind="click: $parent.toggleInfo">
+        <span class="icon info"></span>
+        <span data-bind="text: name"></span>
+    </div>
+    <div class="artistDetailsContent">
+        <div class="artistDetailsInfoBlock" data-bind="click: $parent.toggleInfo">
+            <span class="icon mic"></span>
+            <span class="fieldDescription">Исполнитель: </span>
+            <span class="fieldData"  data-bind="text: name"></span>
+        </div>
+
+        <div class="artistDetailsInfoBlock">
+            <span class="icon heart"></span>
+            <span class="fieldDescription">Оценки: </span>
+            <span class="fieldData" data-bind="text: stats.rank"></span>
+        </div>
+
+        <div class="artistDetailsInfoBlock">
+            <span class="icon heartArrow"></span>
+            <span class="fieldDescription">Выступает: </span>
+            <div class="artistSubBlock">
+            <div>
+                <span class="fieldDescription">Жанры:</span>
+                <span data-bind="foreach: genres">
+                    <span class="fieldData" data-bind="text: name"></span><span data-bind="if: $index() < ($parent.genres.length - 1)">,</span>
+                </span>
+            </div>
+                <div>
+                    <span class="fieldDescription">Стили:</span>
+                    <span data-bind="foreach: styles">
+                        <span class="fieldData" data-bind="text: name"></span><span data-bind="if: $index() < ($parent.genres.length - 1)">,</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="artistDetailsInfoBlock">
+            <span class="icon"></span><span class="fieldDescription">Рейтинг слушателя: </span>
+            <div>
+                <div>
+                    <span class="fieldDescription">Глобально:</span><span class="fieldData">№3 236</span>
+                </div>
+                <div>
+                    <span class="fieldDescription">Россия:</span><span class="fieldData">№3 236</span>
+                </div>
+                <div>
+                    <span class="fieldDescription">Москва:</span><span class="fieldData">№3 236</span>
+
+                </div>
+            </div>
+        </div>-->
+        <!--<div class="artistDetailsInfoBlock">
+            <span class="icon"></span><span class="fieldDescription">Биография: </span>
+            <span>С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+                 С другой стороны дальнейшее развитие различных форм деятельности требуют от на 
+            </span>
+        </div>
+        <div class="artistDetailsInfoBlock">
+            <span class="icon"></span><span class="fieldDescription">Ссылки: </span>
+            <a href="#" target="_blank">vk.com/Usher</a>,
+            <a href="#" target="_blank">vk.com/Usher</a>
+        </div>-->
+    </div>
+</div>

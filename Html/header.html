@@ -1,0 +1,74 @@
+﻿<div id='headerBlock'>
+    <a href='#' id='headerLogo' data-bind="click: goToWelcome"></a>
+    <div id='headerNavigation'>
+        <ul>
+            <li class='topNavigatiobEl topNavigationExpandeble'>
+                <div id='navigationMyPage' title="Моя страница"></div>
+                <div class='dropDownBlock mainNavShift' style='width: 120px; display: none;'>
+                    <!-- show this -->
+                    <div class="headerNavigationFix"></div>
+                    <div class='dropmenuArrow'></div>
+                    <ul class='subNavigation'>
+                        <li data-bind="click: goToHome">
+                            <a href='#'>
+                                <div class='subnavIcons allPage'></div>
+                                Вся страница
+                            </a>
+                        </li>
+                        <!--<li><a href='#'>
+                                    <div class='subnavIcons allPage'></div>
+                                    Вся страница</a></li>-->
+                        <li data-bind="click: goToHomeMusic">
+                            <a href='#'>
+                                      <div class='subnavIcons music'></div>
+                                      Музыка</a>
+                        </li>
+                        <!--<li><a href='#'>    
+                                    <div class='subnavIcons video'></div>
+                                    Видео</a></li>
+                            <li><a href='#'>
+                                    <div class='subnavIcons events'></div>
+                                    События</a></li>
+                            <li><a href='#'>
+                                    <div class='subnavIcons subscribe'></div>
+                                    Подписки</a></li>-->
+                    </ul>
+                </div>
+            </li>
+            <li class='topNavigatiobEl topNavigationExpandeble'>
+                <div id='navigationMyNews' title="Мои новости" data-bind="click: goToNews"></div>
+                <div class='dropDownBlock mainNavShift' style='width: 120px; display: none;'>
+                    <div class="headerNavigationFix"></div>
+                    <div class='dropmenuArrow'></div>
+                    <ul class='subNavigation'>
+                        <li data-bind="click: goToMusic">
+                            <a href='#'>
+                                      <div class='subnavIcons music'></div>
+                                      Музыка<div class='noticeDot'></div>
+                                  </a>
+                        </li>
+                        <!--<li><a href='#'>
+                            <div class='subnavIcons video'></div>
+                            Видео</a></li>-->
+                        <li data-bind="click: goToEvents">
+                            <a href='#'>
+                                      <div class='subnavIcons events'></div>
+                                      События</a>
+                        </li>
+                        <!--<li><a href='#'>
+                            <div class='subnavIcons subscribe'></div>
+                            Подписки</a></li>
+                        <li><a href='#'>
+                            <div class='subnavIcons notice'></div>
+                            Уведомления<div class='noticeDot'></div>
+                        </a></li>-->
+                    </ul>
+                </div>
+            </li>
+            <li id='navigationMusic' class='topNavigatiobEl' data-bind="click: goToMusic"></li>
+            <!--<li id='navigationVideo' class='topNavigatiobEl'></li>-->
+            <li id='navigationEvents' class='topNavigatiobEl' data-bind="click: goToEvents"></li>
+            <li id='navigationPeople' class='topNavigatiobEl' data-bind="click: goToPeople"></li>
+        </ul>
+    </div>
+</div>

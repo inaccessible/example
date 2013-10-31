@@ -1,0 +1,92 @@
+﻿span.icon
+{
+    width: 15px;
+    height: 15px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    float: left;
+    display: block;
+    margin-right: 6px;
+}
+
+span.icon.music {
+    background-image: url(../Images/note.png);
+}
+
+span.icon.stars {
+    background-image: url(../Images/stars.png);
+}
+
+span.icon.info {
+    background-image: url(../Images/info.png);
+}
+
+span.icon.note {
+    background-image: url(../Images/note1.png);
+}
+
+span.icon.album {
+    background-image: url(../Images/albums.png);
+}
+
+span.icon.similar {
+    background-image: url(../Images/similar.png);
+}
+
+span.icon.mic {
+    background-image: url(../Images/mic.png);
+}
+
+span.icon.heart {
+    background-image: url(../Images/heart.png);
+}
+
+span.icon.gift {
+    background-image: url(../Images/gift.png);
+}
+
+span.icon.heartArrow {
+    background-image: url(../Images/heart1.png);
+}
+
+span.icon.heartMore {
+    background-image: url(../Images/heartMore.png);
+}
+
+span.icon.headphones {
+    background-image: url(../Images/headphones.png);
+}
+
+span.icon.people {
+    background-image: url(../Images/people.png);
+}
+
+.icon.notes {
+    background-image: url(../Images/notes.png);
+}
+
+.icon.addToFavDark {
+    background: url(../Images/darkButtons.png) 0 0;
+}
+
+.icon.addToFavDark:hover {
+    background-position: 0 -15px;
+    cursor: pointer;
+}
+
+.icon.triangle {
+    background-image: url(../Images/triangleDark.png);
+}
+
+.icon.triangle:hover {
+    background-position: 0 -15px;
+    cursor: pointer;
+}
+
+.icon.share {
+    background: url(../Images/darkButtons.png) 30px 0;
+}
+
+.icon.sendToWall {
+    background: url(../Images/darkButtons.png) 15px 0;
+}

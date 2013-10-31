@@ -1,0 +1,19 @@
+﻿<div class="genreFilterBlock">
+    <ul data-bind="foreach: genreSelector.genres">
+        <li data-bind="visible: isVisible, click: onClick, css: { active: isActive }"><span data-bind="    text: name"></span></li>
+        <ul data-bind="foreach: styles, visible: (isSelected() && id != 0)" class="subGenders">
+            <li data-bind="click: onClick, clickBubble: false, css: {active: isActive}"><span data-bind="text: name"></span></li>
+        </ul>
+    </ul>
+
+    <div class="leftSearchfilter">
+        <div id="filterByType " class="filterBLock tooltipTop" data-bind="fancyDrop: orderTypes, value: orderType, class: orderType"></div>
+        <div id="filterByTime " class="filterBLock" data-bind="fancyDrop: timeRanges, value: timeRange, class: timeRange"></div>
+        <!--        <div class="hqBlock">
+                        <input id="isHqCk" type="checkbox" class="styled" data-bind="checked: isHighQuality" /><label for="isHqCk">HQ</label>
+                    </div>-->
+    </div>
+    
+
+    <div data-bind="click: about" class="about"></div>          
+</div>

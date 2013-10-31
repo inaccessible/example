@@ -1,0 +1,88 @@
+﻿.rightSearchBlock
+{
+    text-align: left;
+    position: relative;
+    padding-top: 2px;
+}
+
+.rightSearchBlock .searchBar 
+{
+    width: 410px;
+    height: 20px;
+    color: #b4b4b4;
+    margin-left: 10px;
+    line-height: 18px;
+    outline: none;
+    border: 0;
+    display: block; /* f u ie */
+    float: left; /* f u ie */
+}
+
+
+.rightSearchBlock .searchLoader {
+    width: 27px;
+    float: right;
+    margin-left: -27px;
+    padding-right: 7px;
+    padding-top: 3px;
+}
+
+.rightSearchBlock .searchCriterion {
+    float: right;
+    cursor: pointer;
+    line-height: 20px;
+    height: 22px;
+    color: #cacaca;
+    position: relative;
+}
+
+.rightSearchBlock .searchCriterion div.triangleblock {
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    background: url(../Images/select.png) 0 0 no-repeat;
+    float: right;
+    padding-left: 5px;
+}
+
+.rightSearchBlock .searchCriterion .dropDownBlock{
+    margin-top: -15px;
+    right: -10px
+}
+
+.rightSearchBlock .searchCriterion .dropDownBlock .dropmenuArrow {
+    left: 101px;
+}
+
+.rightSearchBlock .searchCriterion:hover div.triangle {
+    background-position: 0 -15px;
+}
+
+.rightSearchBlock .searchCriterion:hover {
+    color: #bfbfbf;
+}
+
+.rightSearchBlock .searchCriterion  {
+    color: #bfbfbf;
+}
+
+.searchBar.cancel .searchLoader{
+    display: block;
+}
+
+.searchCancel {
+    width: 15px;
+    height: 15px;
+    float: left;
+    background: url(../Images/magnifier.png) 4px 2px no-repeat;
+    cursor: pointer;
+}
+
+.searchCancel.cancel 
+{
+    background-position: 4px -23px !important;
+}
+
+.rightSearchBlock .searchCriterion:hover .dropDownBlock {
+    display: block;
+}

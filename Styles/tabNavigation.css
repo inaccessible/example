@@ -1,0 +1,48 @@
+﻿.tabNavigationBLock {
+    width: 565px;
+    height: auto;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+
+#helpContainer .helptabNavigationBLock {
+    margin: 0 -20px;
+}
+
+#helpContainer .helptabNavigationBLock {
+    border-bottom: 1px solid #C3C3C3;
+    border-top: 0;
+    padding: 7px 0 7px 20px;
+    margin: 0 -20px;
+    background-color: #fff;
+}
+
+#helpContainer .tabNavigationBLock ul {
+    padding-left: 20px;
+}
+
+
+.tabNavigationBLock ul.tabNavigation li, #helpContainer .helptabNavigationBLock li {
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 18px;
+    float: left;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.tabNavigationBLock ul.tabNavigation li span, #helpContainer .helptabNavigationBLock li span {
+    color: #666;
+    cursor: pointer;
+}
+
+.tabNavigationBLock ul.tabNavigation li span:hover, #helpContainer .helptabNavigationBLock li span:hover {
+    color: #72b4ec;
+}
+
+.tabNavigationBLock ul.tabNavigation li span.active, #helpContainer .helptabNavigationBLock li span.active{
+    color: #888;
+    font-weight: bold;
+    cursor: default;
+}

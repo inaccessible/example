@@ -1,0 +1,205 @@
+﻿.genreFilterBlock {
+    float: left;
+    width: 105px;
+    margin-left: 15px;
+    color: #666;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 11px;
+}
+
+.genreFilterBlock .active{
+    font-weight: bold;
+    cursor: default;
+    color: #888;
+}
+
+.genreFilterBlock .active:hover 
+{
+    color: #777777;
+    font-weight: bold;
+    cursor: default;
+    border: 1px solid transparent;
+    background-image: none;
+}
+
+ul.subGenders {
+    background: url(../Images/hr_ganre.png) center top no-repeat !important;
+    display: block;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+ul.subGenders li {
+    font-weight: normal;
+    
+}
+
+.genreFilterBlock ul li, .leftSearchfilter .filterBLock {
+    color: #777777;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding-left: 8px;
+    line-height: 18px;
+    height: 18px;
+}
+
+.genreFilterBlock ul li{
+    overflow: hidden;
+}
+
+.genreFilterBlock ul li:active {
+    line-height: 19px;
+}
+
+.filterBLock {
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.filterBLock div.selectedText {
+    float: left; 
+}
+
+.filterBLock.interesting .dropDownBlock .dropmenuArrow
+{
+    left: 88px;
+}
+
+.filterBLock.popular .dropDownBlock .dropmenuArrow
+{
+    left: 76px;
+}
+
+.filterBLock.new .dropDownBlock .dropmenuArrow
+{
+    left: 58px;
+}
+
+.filterBLock.all .dropDownBlock .dropmenuArrow
+{
+    left: 80px;
+}
+
+.filterBLock.year .dropDownBlock .dropmenuArrow
+{
+    left: 48px;
+}
+
+.filterBLock.month .dropDownBlock .dropmenuArrow
+{
+    left: 60px;
+}
+
+.filterBLock.week .dropDownBlock .dropmenuArrow
+{
+    left: 70px;
+}
+
+
+.leftSearchfilter  .dropDownBlock ul li 
+{
+    padding-left: 5px; 
+}
+
+.leftSearchfilter .filterBLock {
+    position: relative;
+}
+
+.genreFilterBlock ul li:hover, .leftSearchfilter .filterBLock:hover {
+    border-color: #eee;
+    color: #72b4ec;
+    background: url(../Images/navigation/menu_hover.jpg)left top repeat-x;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+.leftSearchfilter .filterBLock .triangleblock {
+    width: 15px;
+    height: 15px;
+    float: left;
+    cursor: pointer;
+    background: url(../Images/select.png) 0 0 no-repeat;
+}
+
+.leftSearchfilter .filterBLock:hover .triangleblock {
+    background: url(../Images/select.png) 0 -15px no-repeat;
+}
+
+
+.genreFilterBlock #filterByTime .dropDownBlock {
+    margin-left: -9px;
+    margin-top: -12px;
+    display: none;
+    z-index: 100;
+}
+
+.genreFilterBlock #filterByTime  .dropmenuArrow {
+    left: 105px;
+}
+
+.genreFilterBlock #filterByType .dropDownBlock {
+    margin-left: -9px;
+    margin-top: -12px;
+    display: none;
+    z-index: 100;
+}
+
+.genreFilterBlock #filterByType  .dropmenuArrow {
+    left: 105px;
+}
+
+.filterBLock .dropDownHoverFix{
+    height: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.genreFilterBlock .dropDownBlock .subNavigation .subnavIcons {
+    background: url(../Images/musicFilterIco.png) 0 0 no-repeat;
+}
+
+.genreFilterBlock ul.subNavigation a .subnavIcons.recomenadation {
+    background-position: -30px 0;
+}
+
+.genreFilterBlock ul.subNavigation a .subnavIcons.interesting {
+    background-position: -30px 0; /* TODO: GET ICON*/
+}
+
+.genreFilterBlock ul.subNavigation li:hover div.recomenadation {
+    background-position: -30px -15px;
+}
+
+.genreFilterBlock ul.subNavigation a .subnavIcons.popular {
+    background-position: -15px 0;
+}
+
+.genreFilterBlock ul.subNavigation li:hover div.popular {
+    background-position: -15px -15px;
+}
+
+.genreFilterBlock ul.subNavigation a .subnavIcons.new {
+    background-position: 0 0;
+}
+
+.genreFilterBlock ul.subNavigation li:hover div.new {
+    background-position: 0 -15px;
+}
+
+.leftSearchfilter .hqBlock {
+    color: #666;
+    padding-left: 6px;
+}
+
+.leftSearchfilter .hqBlock label, .leftSearchfilter .hqBlock span.checkbox{
+    cursor: pointer;
+}
+
+.leftSearchfilter .dropDownBlock{
+    top: 23px;
+    width: 115px !important;
+    margin-left: -14px;
+}
+

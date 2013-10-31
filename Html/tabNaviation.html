@@ -1,0 +1,5 @@
+﻿<div class="tabNavigationBLock">
+    <ul class="tabNavigation" data-bind="foreach: tabs">
+        <li><span data-bind="css: {active: $parent.name == $data.viewName }, click: $parent.onTabClick, text: tabText"></span></li>
+    </ul>
+</div>

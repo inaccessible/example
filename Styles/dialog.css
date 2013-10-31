@@ -1,0 +1,162 @@
+﻿.ui-widget-overlay {
+    z-index: 300;
+    background-image: none;
+}
+
+.customDialog.ui-dialog {
+    z-index: 500;
+    padding: 0;
+    padding: 0;
+    border: 0;
+    background: #f5f5f5;
+    -moz-box-shadow: 0 0 1px 0px rgba(0,0,0,0.7), 0px 2px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.7), 0px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.7), 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.customDialog.ui-dialog .ui-widget-content p {
+    padding-top: 15px;
+    color: #777;
+}
+
+.customDialog.ui-dialog .ui-dialog-content {
+    padding: 0;
+    margin: 0;
+}
+
+.customDialog.ui-dialog .ui-icon {
+    background-image: none;
+}
+
+.customDialog.ui-dialog-content {
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane {
+    border-top: 0;
+    height: 41px;
+    margin: 0;
+    padding: 0;
+    background: transparent url("../Images/dialog/footerBg.png") 0 0 repeat-X;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button {
+    height: 22px;
+    padding: 0 9px;
+    outline: none;
+    margin: 9px 15px 0 0;
+    background: url('../Images/dialog/btn_bg.jpg');
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #DDDFE1;
+    color: #3C79AB;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button.ui-state-hover {
+    border: 1px solid #DDDFE1;
+    color: #72B4EC;
+    background: url('../Images/dialog/btn_bg.jpg');
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button span.ui-button-text {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0 0 0 20px;
+
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button .ui-button-icon-primary.gift{
+    width: 15px;
+    height: 15px;
+    background: url('../Images/gift.png') 0 0 no-repeat;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button.ui-state-hover .ui-button-icon-primary.gift{
+    background-position: 0 -15px;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button .ui-button-icon-primary.close{
+    width: 15px;
+    height: 15px;
+    background: url('../Images/close.png') 0 0 no-repeat;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button.ui-state-hover .ui-button-icon-primary.close{
+    background-position: 0 -15px;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button.giftButton {
+    background: url(../Images/dialog/giftBtn.png) no-repeat 0 0;
+    width: 166px;
+    height: 24px;
+}
+
+.customDialog.ui-dialog .ui-dialog-buttonpane button.giftButton:hover {
+    background-position: 0 -24px;
+}
+
+.customDialog.ui-dialog .ui-dialog-titlebar.ui-dialog-titlebar {
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    background: url("../Images/dialog/header.jpg") 0 0 no-repeat;
+    border: 0;
+    height: 26px;
+    width: 501px;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    width: 477px;
+    padding: 8px 10px 0 15px;
+}
+
+.customDialog.ui-dialog .ui-dialog-titlebar.ui-dialog-titlebar .ui-dialog-title {
+    color: #ebebeb;
+    text-shadow: 0 0 3px #335e82;
+}
+
+.customDialog.ui-dialog.ui-widget.ui-corner-all {
+    border-radius: 0; 
+}
+
+.customDialog.ui-dialog.ui-widget.ui-corner-all {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.customDialog.ui-dialog.ui-widget .ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+    right: 10px;
+    border: 0;
+    outline: none;
+    background: transparent url("../Images/dialog/close.png") 0 0 no-repeat;
+    margin-top: -9px;
+    height: 15px;
+    width: 15px;
+}
+
+.customDialog.ui-dialog.ui-widget .ui-button.ui-dialog-titlebar-close.ui-state-hover {
+    background-position: 0 -15px;
+    border: 0;
+}
+
+/*.customDialog.ui-dialog.ui-widget #helpContainer,
+.customDialog.ui-dialog #eventsDialogContainer*/ 
+#dialogScroller {
+    padding: 0 20px;
+    clear: both;
+    height: 408px;
+    z-index: 200;
+    /*position:relative;*/ 
+}
+
+.customDialog.ui-widget-content a {
+    color: #3C79AB;
+}

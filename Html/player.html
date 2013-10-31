@@ -1,0 +1,116 @@
+﻿<style>
+    .trackListBlock .rollbar-path-vertical {
+        margin-right: 5px;
+    }
+</style>
+
+<div id="playerContent">
+    <div class='playerBlock'  data-bind="css: {locked: !track()}">
+        <div class="playerHeader">
+            <a class="albumCover tooltipTrack" data-bind="click: openAlbumDetails, attr: {title: albumName}">
+                <div class="noImageHolder">
+                    <img src="" alt="" data-bind="visible: imageVisibility, attr: {src: imageUrl('large')}" />
+                </div>
+            </a>
+            <div class="trackDetails" data-bind="with: track">
+                <div><span class="detailDescription">Трек: </span><a href="#" data-bind="text: title, click: $parent.openTrackDetails"></a></div>
+                <div>
+                    <span class="detailDescription">Исполнитель: </span>
+                    <span data-bind="foreach: artists">
+                        <a href="#" data-bind="text: name, click: $parents[1].openArtistDetails"></a><span data-bind="    if: $index() < ($parent.artists.length - 1)">,</span>
+                    </span>
+                </div>
+                <div>
+                    <span class="detailDescription">Жанр: </span>
+                    <span data-bind="foreach: genres">
+                        <a href="#" data-bind="text: name, click: $parents[1].setGenre"></a><span data-bind="    if: $index() < ($parent.genres.length - 1)">,</span>
+                    </span>
+                </div>
+                <div>
+                    <span class="detailDescription">Стиль: </span>
+                    <span data-bind="foreach: styles">
+                        <a href="#" data-bind="text: name, click: $parents[1].setStyle"></a><span data-bind="    if: $index() < ($parent.styles.length - 1)">,</span>
+                    </span>
+                </div>
+                <div class="rankBlock" data-bind="visible: likes > 0">
+                    <a href='#'><span class="heart"></span><span data-bind="text: likes"></span></a>
+                </div>
+                <!--<div class="trackQuality"><span class="detailDescription">HQ</span></div>-->
+            </div>
+            <div class="compactViewBtn" data-bind="click: collapse" title="Свернуть плеер"></div>
+            <div class="bottomButtonsBlock">
+                <div class="btnRotator"></div>
+<!--                <div class="menuTriangle">
+                    <div class='dropDownBlock' style="display: none;">
+                        <div class='dropmenuArrow'></div>
+                        <ul class='subNavigation'>
+                            <li><a href='#'>
+                                <div class='subnavIcons addTofavorite'></div>
+                                Добавить в избранное</a></li>
+                            <li><a href='#'>
+                                <div class='subnavIcons share'></div>
+                                Поделиться</a></li>
+                            <li><a href='#'>
+                                <div class='subnavIcons sendToWall'></div>
+                                Отправить на стену</a></li>
+                            <li><a href='#'>
+                                <div class='subnavIcons addToPLaylist'></div>
+                                Добавить в плейлист</a></li>
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class='playerMainBlock'>
+            <div class='buttonBlock'>
+                <div class='playerButton prev' data-bind="click: prev"></div>
+                <div class='playerButton playPause' data-bind="click: playPause, css:{ pause: state() == 'playing'}"></div>
+                <div class='playerButton next' data-bind="click: next"></div>
+                <div class='playerButton songActions share' data-bind="" title="Добавить в избранное"></div>
+                <div class='playerButton repeat' data-bind="toggleButton: isLooped, whenActive: 'repeating', tooltipText: isLoopedTooltip" title=""></div>
+                <div style='clear: both;'></div>
+            </div>
+            <div class='centerPart'>
+                <div class='cover' data-bind="click: openAlbumDetails, attr: {title: albumName}">
+                    <img src="" alt="" data-bind="visible: imageVisibility, attr: {src: imageUrl('small')}" />
+                </div>
+                <div class='trackName' data-bind="text: trackCaption"></div>
+                <div class='trackSlider' data-bind="slider: positionSliderOptions">
+                    <div class="trackLoaderBarContainer">
+                        <div class="trackLoaderBar" style="width: 0%;"></div>
+                    </div>
+
+                </div>
+
+                <div class='trackTimer' data-bind="text: time, toggleButton: isElapsed"></div>
+                <div class='soundIco' data-bind="toggleButton: isMuted, activeCss: 'mute', onToggle: refreshVolume, tooltipText: isMutedTooltip" title=""></div>
+                <div class='trackVolume' data-bind="slider: volumeSliderOptions"></div>
+            </div>
+            <div class="btnPartial"></div>
+            <div class='switchToFullView' data-bind="click: expand" title="Развернуть плеер"></div>
+        </div>
+        <div class="playerPlaylistBlock">
+            <div class="playlistHeader">
+                <div class="songAmount" data-bind="text: tracks().length">1000</div>
+                <div class="playlistHeaderButtons">
+                    <div class="convertToPls" title="Перевести в плейлист"></div>
+                    <div class="shuffle" data-bind="toggleButton: isShuffled" title="Перемешать"></div>
+                    <div class="clearPlaylist" data-bind="click: clearPlaylist" title="Очистить треклист"></div>
+                </div>
+            </div>
+            <div class="trackListBlock">
+                <div data-bind="foreach: tracks">
+                    <div class="plTrack" data-bind="css:{current: isCurrent}, click: onTrackClick, clickBubble: false">
+                        <div class="trackName" data-bind="text: title"></div>
+                        <div class="trackArtist" data-bind="foreach: artists">
+                            <a href="#" data-bind="text: name, click: $parents[1].openArtistDetails, clickBubble: false"></a><span data-bind="    if: $index() < ($parent.artists.length - 1)">,</span>
+                        </div>
+                        <div class='deleteTrack' data-bind="click: onDeleteClick"></div>
+                        <div class="trackTime" data-bind="text: time"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="playerBackground" class="lockBackground" data-bind="click: collapse"></div>
+</div>

@@ -1,0 +1,29 @@
+﻿.personsBlock .artistBlock .artistName {
+    text-decoration: none;
+    color: #3C79AB;
+}
+
+.personsBlock .personBlock .personName {
+    color: #3C79AB;
+}
+
+.personsBlock .personBlock .personName:hover {
+    cursor: pointer;
+    color: #72B4EC;
+}
+
+.personsBlock .personBlock .personNameHolder {
+    line-height: 16px;
+}
+
+.personsBlock .artistView .personStylesBlock,
+.personsBlock .artistView .rankBlock
+ {
+    display: block;
+}
+
+.personsBlock .userView .personStylesBlock,
+.personsBlock .userView .rankBlock
+{
+    display: none;
+}
